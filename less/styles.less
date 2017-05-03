@@ -165,47 +165,51 @@ header {
     position: relative;
     width: 100%;
     min-height: auto;
-    .background-cover;
-    background-image: url('../img/suzanne-cov-4.jpg');
+    background: @theme-primary;
     text-align: center;
     color: white;
     .header-content {
         position: relative;
         text-align: center;
-        padding: 100px 15px 100px;
+        padding: 55px 0;
         width: 100%;
-        @media (max-width: 800px) {
-            height: 570px;
-        }
+        .header-img {
+                display: block;
+                img {
+                    width: 100%;
+                }
+            }
         .header-content-inner {
             h1 {
                 text-transform: uppercase;
-                margin-top: 0;
+                margin-top: 40px;
                 margin-bottom: 0;
                 font-size: 36px;
             }
-            hr {
-                margin: 30px auto;
-            }
-            p {
-                font-weight: 300;
-                color: fade(white, 70%);
-                font-size: 16px;
-                margin-bottom: 50px;
+        }
+        
+    }
+    .arrow {
+            text-align: center;
+            padding-top: 5vh;
+            .fa {
+                
+                color: #fff;
+                font-size: 6em;
             }
         }
-    }
-    @media (min-width: 800px) {
-        background-position: center;
+
+    @media (min-width: 767px) {
+        .background-cover;
         background-image: url('../img/suzanne-cov-4.jpg');
-        min-height: 100%;
+        height: 100%;
         .header-content {
             position: absolute;
-            top: 50%;
-            -webkit-transform: translateY(-50%);
-            -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+            top: 35%;
             padding: 0 50px;
+            .header-img {
+                display: none;
+            }
             .header-content-inner {
                 max-width: 1000px;
                 margin-left: auto;
@@ -213,11 +217,20 @@ header {
                 h1 {
                     font-size: 50px;
                 }
-                p {
-                    font-size: 18px;
-                    max-width: 80%;
-                    margin-left: auto;
-                    margin-right: auto;
+            }
+        }
+        .arrow {
+            padding-top: 85vh;
+            .fa {
+                
+                color: #fff;
+                font-size: 8em;
+                &:hover,
+                &:focus,
+                &.focus,
+                &:active,
+                &.active, {
+                    color: @gray;
                 }
             }
         }

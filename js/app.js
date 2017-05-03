@@ -44,6 +44,11 @@
         scale: 0.3,
         distance: '0px'
     }, 300);
+    sr.reveal('.arrow', {
+        duration: 1500,
+        scale: 0.1,
+        distance: '0px'
+    }, 300);
 
     // Initialize and Configure Magnific Popup Lightbox Plugin
     $('.popup-gallery').magnificPopup({
